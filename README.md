@@ -4,6 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Run
 Runs the app in the development mode.\
-Click [https://x-cinema.herokuapp.com/](xCinema) to view it in your browser.
+Click [xCinema](https://x-cinema.herokuapp.com/) to view it in your browser.
 
 ### Functionality
