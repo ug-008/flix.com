@@ -1,9 +1,12 @@
-# Getting Started On xCinema 
+# Getting Started 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project, created in react-js aims at creating a simple layout for your web app.
 
-### Run
-Runs the app in the development mode.\
-Click [xCinema](https://x-cinema.herokuapp.com/) to view it in your browser.
+### Showcase
+To showcase this project, click [xCinema](https://x-cinema.herokuapp.com/) to view it in your browser.
 
 ### Functionality
+* ~~Responsiveness~~
+* Theme(ing)
+* Drawer
+* Navigation
