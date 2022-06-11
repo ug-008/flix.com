@@ -1,3 +1,6 @@
+[//]: # (Get Mark-down syntax)
+[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 # Getting Started 
 
 This project, created in react-js aims at creating a simple layout for your web app.
