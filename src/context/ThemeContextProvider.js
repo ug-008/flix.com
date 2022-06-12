@@ -7,7 +7,7 @@ class ThemeContextProvider extends React.Component {
     state = {
         index: 0,
 
-        switch: ( ) => {
+        defaultTheme: ( ) => {
 
             switch(this.state.index) {
 

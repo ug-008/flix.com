@@ -8,7 +8,6 @@ const element = styled.div`
             display: ${props.display || 'flex'};
             align-items: ${props.align || 'left'};
             flex-direction: ${props.direction || 'column'};
-            
         `
     }}
 `;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React, { useState } from "react";
+import styled from "styled-components";
 
 
 const opened = {
@@ -78,12 +78,11 @@ const CSSWrapper = styled.div`
             }
         
             @media screen and (max-width: 768px) {
-                /**display: none;**/
+                display: none;
             }
         `;
-    }}
-	
-`;
+    }
+}`;
 
 export default function Drawer(props) {
 

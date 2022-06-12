@@ -9,8 +9,6 @@ const CSSWrapper = styled.div`
     > #outlet {
         flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
 `;

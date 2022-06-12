@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 const StyledNavItem = styled(Link)`
-    flex: '1';
+    flex: 1;
     color: var(--font);
 	text-decoration: none;
 	align-items: center;

@@ -22,16 +22,16 @@ import Home from './pages/home';
 import NowPlaying from './pages/now-playing';
 import Music from './pages/music';
 import Layout from './Layout';
-import ThemeContextProvider from './context/ThemeContextProvider';
 import Videos from './pages/videos';
 import Posts from './pages/posts';
 import Cart from './pages/my-cart';
+import {context} from './app.module';
 
 
 function App() {
 
   return (
-    <ThemeContextProvider>
+    <context.theme>
       <Router>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -45,7 +45,7 @@ function App() {
           </Route> 
         </Routes>
       </Router>
-    </ThemeContextProvider>
+    </context.theme>
   );
 }
 

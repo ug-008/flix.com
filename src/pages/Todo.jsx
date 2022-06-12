@@ -3,13 +3,16 @@ import React from "react";
 function Todo(props) {
 
     const style = {
-        width: '400px',
+        width: '85vw',
+        maxWidth: '400px',
         height: '200px',
         fontSize: '7rem',
         border: '2px dotted gray',
         borderRadius: '5px',
         display: 'flex',
         flexDirection: 'column',
+        alignSelf: 'center',
+        margin: 'auto',
         alignItems: 'center',
         justifyContent: 'center',
         color: '#555',
