@@ -1,6 +1,6 @@
-import ThemeContextProvider from './context/ThemeContextProvider';
+import ContextProvider from './context/AppContext';
 
 export const context = {
-    theme: ThemeContextProvider
+    theme: ContextProvider
 }
 

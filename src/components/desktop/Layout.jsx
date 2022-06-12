@@ -1,4 +1,4 @@
-import { ThemeContext } from "../../context/ThemeContextProvider";
+import { AppContext } from "../../context/AppContext";
 import React, { useContext, useEffect } from "react";
 import { desk } from "./desk.module";
 
@@ -6,11 +6,11 @@ function DeskLayout () {
 
     useEffect(
         () => {
-        themes.defaultTheme()
+            context.defaultTheme()
         }
     );
 
-    const themes = useContext(ThemeContext);
+    const context = useContext(AppContext);
 
     return(
         <desk.stage>
@@ -23,7 +23,7 @@ function DeskLayout () {
 
                 <desk.left direction='row'>
 
-                    <desk.drawer text='Archive Of Things'>
+                    <desk.drawer appName={context.name}>
 
                         <div id="top">
                             <desk.pager to='home' text='Home' icon='bi bi-house'/>
@@ -36,7 +36,7 @@ function DeskLayout () {
 
                         <div id="bottom">
                             <desk.pager text='Layout' icon='bi bi-grid'/>
-                            <desk.pager text='Contrast' icon='bi bi-circle-half' click={themes.defaultTheme}/>
+                            <desk.pager text='Contrast' icon='bi bi-circle-half' click={context.defaultTheme}/>
                         </div>
 
                     </desk.drawer>

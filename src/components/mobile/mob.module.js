@@ -8,6 +8,7 @@ import MobileUi from "./MobUI";
 import MobDrawer from './MobDrawer';
 import MobPagerItem from './MobNav';
 import MobConfigUi from './MobUiConfig';
+import MobPromptUi from './MobPromptUi';
 
 export const mob = {
     stage: MobStage,
@@ -16,5 +17,6 @@ export const mob = {
     workspace: MobWorkspace,
     drawer: MobDrawer,
     pager: MobPagerItem,
-    config: MobConfigUi
+    config: MobConfigUi,
+    prompt: MobPromptUi
 }

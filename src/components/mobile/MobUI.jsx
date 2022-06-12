@@ -1,5 +1,6 @@
-import { ThemeContext } from "../../context/ThemeContextProvider";
+import { AppContext } from "../../context/AppContext";
 import React, { useContext, useEffect, useState } from "react";
+import { fullscreen } from "../../functions/fullscreen";
 import { Outlet } from "react-router-dom";
 import { mob } from './mob.module';
 
@@ -7,13 +8,13 @@ var defaultSettings = true;
 
 export default function MobileUi(props) {
 
-    const themes = useContext(ThemeContext);    
+    const context = useContext(AppContext);    
 
     useEffect(
 
         () => {
             if(defaultSettings) {
-                themes.defaultTheme();
+                context.defaultTheme();
             }
             return( ) => {
                 defaultSettings = false;
@@ -24,9 +25,14 @@ export default function MobileUi(props) {
 
     const [toggle, setToggle] = useState();
 
+    const[maxScreen, setMaxScreen] = useState(fullscreen.isClose);
+
     return (
         <mob.stage>
-            <mob.drawer state={{toggle, setToggle}}>
+
+            {document.fullscreenEnabled && <mob.prompt />}
+
+            <mob.drawer state={{toggle, setToggle}} appName={context.name}>
 
                 <mob.pager to='home' 
                             text='Home' 
@@ -65,13 +71,23 @@ export default function MobileUi(props) {
 
             <mob.bottom>
                 <mob.config>
-                    <div>
-                        <i className = 'bi bi-grid'/>
+                    <div onClick = {
+                            ()=> {
+                                if(document.fullscreenEnabled) {
+                                    context.setFullscreen();
+                                    // setMaxScreen(!fullscreen.isClose);
+                                }
+                            }
+                         }>
+                        <i className = {context.fullscreen ? 'bi bi-fullscreen-exit':'bi bi-arrows-fullscreen'}/>
                     </div>
+
                     <div className="mob-sep" />
-                    <div onClick={themes.defaultTheme}>
+
+                    <div onClick={context.defaultTheme}>
                         <i className = 'bi bi-circle-half'/>
                     </div>
+
                 </mob.config>
             </mob.bottom>
 

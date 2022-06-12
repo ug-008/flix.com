@@ -69,10 +69,12 @@ const CSSWrapper = styled.div`
                 }
 
                 > span {
+                    flex: 1;
+                    text-align: center;
                     white-space: pre;
                     font-style: italic;
-                    font-size: .9rem;
-                    padding-left: 5px;
+                    font-size: 1.0rem;
+                    padding-right: 40px;
                 }
 
             }
@@ -103,7 +105,7 @@ export default function Drawer(props) {
                     <i className={props.icon || 'bi bi-list'} />
                 </div>
                 <span> 
-                    {props.text} 
+                    {props.appName} 
                 </span>
             </div>
 

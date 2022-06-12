@@ -47,7 +47,7 @@ export default function MobDrawer(props) {
                     <i className={props.icon || 'bi bi-list'} />
                 </div>
                 <span style={opened ? o001 : c001 }> 
-                    Pool
+                    {props.appName}
                 </span>
                 <div id="mob-ear" >
                     <i className={opened ? 'bi bi-chevron-left' : 'bi bi-chevron-right'} />
@@ -110,6 +110,7 @@ const CSSMobWrapper = styled.div`
                 border-top-right-radius: 40px;
                 border-bottom-right-radius: 40px;
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+                margin-top: 5px;
                 
                 > div#mob-ear {
                     display: flex;
