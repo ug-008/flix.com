@@ -34,7 +34,12 @@ function App() {
   const lesserThan768 = useMediaPredicate("(max-width: 768px)");
   const greaterThan768 = useMediaPredicate("(min-width: 768px)");
 
-  useEffect(()=> document.body.requestFullscreen())
+  useEffect(()=> {
+    document.body.requestFullscreen()
+    return() => {
+      // unmount
+    }
+  })
 
   return (
     <context.theme>
