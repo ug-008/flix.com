@@ -19,22 +19,32 @@ import {
  * Pages 
  */
 import Home from './pages/home';
-import NowPlaying from './pages/now-playing';
 import Music from './pages/music';
-import Layout from './Layout';
+import NowPlaying from './pages/now-playing';
 import Videos from './pages/videos';
 import Posts from './pages/posts';
 import Cart from './pages/my-cart';
 import {context} from './app.module';
+import {mob} from './components/mobile/mob.module';
+import {desk} from './components/desktop/desk.module';
+import { useMediaPredicate } from "react-media-hook";
 
 
 function App() {
-
+  const lesserThan768 = useMediaPredicate("(max-width: 768px)");
+  const greaterThan768 = useMediaPredicate("(min-width: 768px)");
   return (
     <context.theme>
       <Router>
         <Routes>
-          <Route path='/' element={<Layout />}>
+          <Route element = {
+                  <>
+                    {lesserThan768 && <mob.layout />}
+                    {greaterThan768 && <desk.layout />}
+                  </>
+                 }
+                 path='/'>
+
             <Route path='home' element={<Home />} />
             <Route path='now-playing' element={<NowPlaying />} />
             <Route path='music' element={<Music />} />
