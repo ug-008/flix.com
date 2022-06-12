@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /**
  * Styles
@@ -33,6 +33,9 @@ import { useMediaPredicate } from "react-media-hook";
 function App() {
   const lesserThan768 = useMediaPredicate("(max-width: 768px)");
   const greaterThan768 = useMediaPredicate("(min-width: 768px)");
+
+  useEffect(()=> document.body.requestFullscreen())
+
   return (
     <context.theme>
       <Router>
@@ -43,7 +46,7 @@ function App() {
                     {greaterThan768 && <desk.layout />}
                   </>
                  }
-                 path='/'>
+                 path='/' >
 
             <Route path='home' element={<Home />} />
             <Route path='now-playing' element={<NowPlaying />} />

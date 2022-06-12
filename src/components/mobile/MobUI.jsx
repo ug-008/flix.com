@@ -5,7 +5,7 @@ import { mob } from './mob.module';
 
 var defaultSettings = true;
 
-export default function MobileUi() {
+export default function MobileUi(props) {
 
     const themes = useContext(ThemeContext);    
 
@@ -13,7 +13,7 @@ export default function MobileUi() {
 
         () => {
             if(defaultSettings) {
-                themes.defaultTheme()
+                themes.defaultTheme();
             }
             return( ) => {
                 defaultSettings = false;
