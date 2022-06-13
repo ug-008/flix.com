@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CSSFloatNav = styled.div`
+const ShortcutComponent = styled.div`
     > div {
         flex: none;
         padding: 0 10px;
@@ -23,9 +23,9 @@ const CSSFloatNav = styled.div`
 export default function FloatNav(props) {
 
     return (
-        <CSSFloatNav>
+        <ShortcutComponent>
             {props.children}
-        </CSSFloatNav>
+        </ShortcutComponent>
     );
 
 }

@@ -1,5 +1,6 @@
 import { AppContext } from "../../context/AppContext";
 import React, { useContext, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import { desk } from "./desk.module";
 
 function DeskLayout () {
@@ -41,7 +42,7 @@ function DeskLayout () {
 
                 </desk.left>
 
-                <desk.workspace align='center'>
+                <desk.workspace>
 
                     <desk.shortcut>
                         <desk.pager text='Top Rated'/>
@@ -49,6 +50,10 @@ function DeskLayout () {
                         <desk.pager text='In Theaters'/>
                         <desk.pager text='TV shows'/>
                     </desk.shortcut>
+
+                    <div id='outlet'>
+                        <Outlet />
+                    </div>
 
                 </desk.workspace>
 

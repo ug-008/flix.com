@@ -44,5 +44,11 @@ export const RightSpace = styled(element)`
 
 export const Workspace = styled(element)`
     flex: 1;
-    justify-content: center;
+    display: flex;
+    position: relative;
+
+    > #outlet {
+        flex: 1;
+        display: flex;
+    }
 `;

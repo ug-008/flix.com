@@ -2,7 +2,7 @@ import {
     MobStage, 
     MobBottomNav,
     MobWorkspace,
-} from '../styled-components/MobLayoutUi';
+} from '../styled-components/MobLayout';
 
 import MobLayout from "./MobLayout";
 import MobMenuItem from './MobMenuItem';

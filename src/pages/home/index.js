@@ -3,7 +3,9 @@ import Todo from '../Todo'
 
 const Home = () => {
 	return (
-		<Todo value='Home' icon='bi bi-house' />
+		// <Todo value='Home' icon='bi bi-house' />
+		<>
+		</>
 	);
 };
 

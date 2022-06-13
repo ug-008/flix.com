@@ -1,6 +1,5 @@
 import { AppContext } from "../../context/AppContext";
 import React, { useContext, useEffect, useState } from "react";
-import { fullscreen } from "../../hooks/fullscreen";
 import { Outlet } from "react-router-dom";
 import { styledComponent, mob } from './mob.module';
 

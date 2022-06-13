@@ -4,13 +4,13 @@ import {
     Stage, 
     LeftSpace, 
     RightSpace, 
-    TopSpace, 
-} from './LayoutUI';
+    TopSpace,
+    Workspace, 
+} from '../styled-components/DeskLayout';
 import Drawer from "./Drawer";
 import Layout from "./Layout";
 import NavItem from "./NavItem";
 import FloatNav from "./FloatedNavUI";
-import Workspace from "./WorkspaceUI";
 
 export const desk = {
     stage: Stage,
