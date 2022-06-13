@@ -1,21 +1,22 @@
 import React, {createContext} from 'react';
-import { fullscreen } from '../functions/fullscreen';
-import Themes from '../functions/themes';
+import { fullscreen } from '../hooks/fullscreen';
+import Themes from '../hooks/themes';
 
 export const AppContext = createContext( );
 
 export default class ContextProvider extends React.Component {
 
     state = {
-        name: 'flix.com',
+        name: 'flix.com', //flix.com
 
         fullscreen: false,
 
-        setFullscreen: (callback) => {
+        setFullscreen: (e, callback) => {
+            if(e) e.stopPropagation();
             fullscreen.toggle(this, callback)
         },
         
-        defaultTheme: ( ) => Themes(getDefaultTheme()),
+        defaultTheme: (e) => Themes(getDefaultTheme(e)),
     }
 
     render( ) {
@@ -34,10 +35,12 @@ export default class ContextProvider extends React.Component {
  * Get default theme
  */
 var count = 0;
-const getDefaultTheme = ( ) => {
+const getDefaultTheme = (e) => {
     count++;
 
-    if(count > 2) count = 0;
+    if(e) e.stopPropagation();
+
+    if(count > 1) count = 0;
 
     return count;
 

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const PagerItem = styled(NavLink)`
+const MenuItem = styled(NavLink)`
     color: var(--font);
 	text-decoration: none;
 	cursor: pointer;
@@ -19,14 +19,18 @@ const PagerItem = styled(NavLink)`
 		color: var(--accent);
 	}
 
+    &:hover{
+        color: var(--font);
+        filter: brightness(150%);
+    }
+
 `;
 
-export default function MobPagerItem(props) {
+export default function MobMenuItem(props) {
     return (
-        <PagerItem to={props.to} 
-                    onClick={props.toggleDrawer}>
+        <MenuItem to={props.to} onClick={props.toggleDrawer}>
             <i className={props.icon} />
             <span>{props.text}</span>
-        </PagerItem>
+        </MenuItem>
     );
 } 

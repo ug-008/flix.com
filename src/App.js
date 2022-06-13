@@ -25,9 +25,9 @@ import Videos from './pages/videos';
 import Posts from './pages/posts';
 import Cart from './pages/my-cart';
 import {context} from './app.module';
-import {mob} from './components/mobile/mob.module';
-import {desk} from './components/desktop/desk.module';
 import { useMediaPredicate } from "react-media-hook";
+import {mob} from './components/mobile-components/mob.module';
+import {desk} from './components/desktop-components/desk.module';
 
 
 function App() {

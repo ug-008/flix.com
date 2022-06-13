@@ -15,9 +15,7 @@ function DeskLayout () {
     return(
         <desk.stage>
 
-            <desk.top>
-                
-            </desk.top>
+            <desk.top>{/** TODO: */}</desk.top>
 
             <desk.fragment>
 
@@ -44,23 +42,21 @@ function DeskLayout () {
                 </desk.left>
 
                 <desk.workspace align='center'>
+
                     <desk.shortcut>
                         <desk.pager text='Top Rated'/>
                         <desk.pager text='Upcoming' />
                         <desk.pager text='In Theaters'/>
                         <desk.pager text='TV shows'/>
                     </desk.shortcut>
+
                 </desk.workspace>
 
-                <desk.right >
-
-                </desk.right>
+                <desk.right >{/** TODO: */}</desk.right>
 
             </desk.fragment>
 
-            <desk.bottom >
-                
-            </desk.bottom>
+            <desk.bottom >{/** TODO: */}</desk.bottom>
 
         </desk.stage>
     );
