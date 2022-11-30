@@ -1,12 +1,11 @@
-import App from "./App";
 import React from "react";
+import App from "./App";
+import '@style/Index.css';
 import ReactDOM from "react-dom/client";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.createRoot(document.getElementById("root"))
+ReactDOM.createRoot(document.getElementById("project-root"))
         .render(
-          <React.StrictMode>
-              <App />
+            <React.StrictMode>
+                <App />
             </React.StrictMode>
         );

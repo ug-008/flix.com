@@ -1,0 +1,69 @@
+.Portal-container {
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.Portal-container .Floating-divider {
+    z-index: 0;
+    position: absolute;
+    background: var(--ui);
+    border-bottom: 1px solid var(--border);;
+    width: 100%;
+}
+
+.Portal-container .PiiInfo-container {
+    display: flex;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.Portal-container .PiiInfo-container .MuiAvatar-root {
+    background: var(--ui);
+    border: 1px solid var(--border);;
+}
+
+.Portal-container .NavMonitor-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Portal-container .Main-tabs .MuiTab-root,
+.Portal-container .MuiTabs-root.Main-tabs,
+.Portal-container .Floating-divider {
+    height: 30px;
+    min-height: 30px;
+
+}
+
+.Portal-container .MuiTab-root {
+    min-width: 0;
+    padding: 2px 15px 0 15px;
+    text-transform: none;
+}
+
+.Portal-container .MuiTabs-root{
+    position: relative;
+}
+
+.Portal-container .MuiTab-root.Mui-selected {
+    color: var(--primary);
+    background-color: var(--ui);
+}
+
+.Portal-container .MuiTabs-root .MuiTabs-indicator {
+    background-color: var(--primary);
+}
+
+.Portal-container .MuiTab-root .MuiSvgIcon-root {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: inherit;
+}
+
+.Portal-container .TabPane-root {
+    flex: 1;
+}

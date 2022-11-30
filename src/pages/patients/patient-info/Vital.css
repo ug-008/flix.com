@@ -1,0 +1,135 @@
+.Vital-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+
+}
+
+.Vital-root .Title-note {
+    /*opacity: .7;*/
+    align-self: flex-start;
+    /*font-style: italic;
+    font-weight: bold;*/
+    font-size: 1.1rem;
+    padding: 5px 4%;
+}
+
+.Vital-root .New-vital,
+.Vital-root .History-vital {
+    flex: .5;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    padding: 2px;
+}
+
+.Vital-root .History-vital .Retry-btn {
+    border-radius: 25px;
+    text-transform: none;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 4px -2px var(--bg);
+}
+
+
+.Vital-root .History-vital .Time-tag,
+.Vital-root .History-vital .Latest-tag {
+    border-radius: 5px;
+    background: #FFD700;
+    color: #222;
+    padding: 2px 5px;
+    width: 100%
+}
+
+.Vital-root .History-vital .Time-tag {
+    opacity: 0.85
+}
+
+.Vital-check.Vitals-modal {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 400px;
+    max-height: 90%;
+    padding: 20px 20px;
+    position: relative;
+}
+
+.Vital-check.Vitals-modal .Close-btn {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: var(--ui);
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border: 1px solid var(--border);
+    align-self: end;
+    top: 2px;
+    right: 2px;
+
+}
+
+.Vital-check.Vitals-modal .Vitals-fields {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border: 1px solid var(--border);
+    background: var(--ui);
+    padding: 10px 15px 20px 20px;
+}
+
+.Vital-check.Vitals-modal .Row-vitalCheck {
+    display: flex;
+}
+
+.Vital-root .DataView .MuiPaper-root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--ui);
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+}
+
+.Vital-root .DataView .MuiTableContainer-root {
+    flex: 1;
+}
+
+.Vital-root .DataView .MuiTableContainer-root .MuiTableCell-head {
+    background: var(--ui);
+}
+
+.Vital-root .DataView .MuiTablePagination-root {
+    justify-self: end;
+    margin-bottom: 0;
+}
+
+.Vital-root .DataView .MuiTablePagination-toolbar {
+    padding: 0 20px !important;
+    min-height: 40px !important;
+}
+
+.Vital-root .DataView .MuiTablePagination-selectLabel,
+.Vital-root .DataView .MuiTablePagination-displayedRows,
+.Vital-root .DataView .MuiTablePagination-actions button {
+    width: 30px;
+    height: 30px;
+}
+
+.Vital-root .DataView .MuiTablePagination-selectLabel,
+.Vital-root .DataView .MuiTablePagination-displayedRows {
+    margin: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+

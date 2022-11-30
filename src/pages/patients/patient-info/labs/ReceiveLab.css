@@ -1,0 +1,63 @@
+.QuickLabs-main {
+    margin: 5px;
+    border: 1px solid var(--border);
+    border-width: 0 1px 1px 1px ;
+    background: var(--ui)
+}
+
+.QuickLabs-main .QuickLabs-scroll {
+    overflow-y: auto;
+}
+
+.QuickLabs-main .QuickLabs-scroll > .Request-time {
+    display: flex;
+}
+
+.QuickLabs-main .QuickLabs-scroll .Labs-root {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--bg);
+    outline-offset: -2px;
+    overflow-y: auto;
+    min-height: 150px;
+}
+
+.QuickLabs-main .QuickLabs-scroll .Labs-root .LabItem-root {
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid var(--bg);
+    background: var(--ui);
+    max-height: 30px;
+}
+
+.QuickLabs-main .QuickLabs-scroll .LabItem-root .MuiFormGroup-root .MuiFormControlLabel-label {
+    padding-top: 2.5px;
+}
+
+.QuickLabs-main .QuickLabs-scroll .LabItem-root .MuiFormGroup-root .MuiFormControlLabel-root {
+    width: 100px;
+    height: 30px;
+    font-size: .86rem;
+}
+
+.QuickLabs-main .QuickLabs-scroll > .Request-time .Time {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    background: var(--bg);
+    padding: 0 10px;
+    height: 30px
+}
+
+.QuickLabs-main .QuickLabs-scroll .Note {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0 10px;
+    color: var(--primary);
+    border: 0 solid var(--border);
+    border-width: 0 0 1px 0;
+    margin: 5px 2px 0;
+}

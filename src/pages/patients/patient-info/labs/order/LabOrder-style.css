@@ -1,0 +1,68 @@
+.LabOrder-main {
+    margin: 5px;
+    border: 1px solid var(--border);
+    border-width: 0 1px 1px 1px ;
+    background: var(--ui)
+}
+
+.LabOrder-main .LabOrder-scroll {
+    overflow-y: auto;
+}
+
+.LabOrder-main .LabOrder-scroll > .Request-time {
+    display: flex;
+}
+
+.LabOrder-main .LabOrder-scroll > .Request-time .Urgency-root .MuiFormGroup-root .MuiFormControlLabel-root {
+    width: 90px;
+    height: 30px;
+}
+
+.LabOrder-main .LabOrder-scroll > .Request-time .Time {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    background: var(--bg);
+    padding: 0 10px;
+    height: 30px
+}
+
+.LabOrder-main .LabOrder-scroll .Note {
+    display: flex;
+    align-items: center;
+    font-size: .86rem;
+    padding: 5px 10px;
+    color: var(--primary);
+    opacity: .8;
+    border: 1px solid var(--border);
+    border-width: 1px 0;
+    margin-top: 5px;
+}
+
+.LabOrder-main .LabOrder-scroll .Popular-labs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+    overflow: auto;
+}
+
+.LabOrder-main .LabOrder-scroll .Popular-labs .MuiCheckbox-root {
+
+}
+
+.LabOrder-main .LabOrder-scroll .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root {
+    color: var(--primary);
+    border: 2px solid var(--border);
+}
+
+.LabOrder-main .LabOrder-scroll .MuiCheckbox-root .MuiSvgIcon-root {
+    font-size: 1.5rem
+}
+
+.LabOrder-main .LabOrder-scroll .MuiFormControlLabel-label {
+    width: 100px;
+    padding-top: 2.5px;
+    font-size: .86rem
+}

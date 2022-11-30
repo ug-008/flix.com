@@ -1,63 +1,52 @@
-import React, { useEffect } from 'react';
-
-/**
- * Styles
- */
-import './App.css';
-
-/**
- * Router
- */
-import { 
-  Route,
-  Routes, 
-  BrowserRouter as Router,
-  Navigate,
-} from 'react-router-dom';
-
-/**
- * Pages 
- */
-import Home from './pages/home';
-import Music from './pages/music';
-import NowPlaying from './pages/now-playing';
-import Videos from './pages/videos';
-import Posts from './pages/posts';
-import Cart from './pages/my-cart';
-import {context} from './app.module';
+import '@global'
+import '@style/App.css';
+import HomePage from '@pages'
+import {appRoutes} from "@routes";
+import * as React from 'react';
+import AppContextProvider from "@context";
+import {ThemeProvider} from "@mui/material/styles"
 import { useMediaPredicate } from "react-media-hook";
-import {mob} from './components/mobile-components/mob.module';
-import {desk} from './components/desktop-components/desk.module';
+import CssBaseline from '@mui/material/CssBaseline';
+import {muiThemes} from './themes/MuiThemes'
+import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
 
 
-function App() {
-  const lesserThan768 = useMediaPredicate("(max-width: 768px)");
-  const greaterThan768 = useMediaPredicate("(min-width: 768px)");
+const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
-  return (
-    <context.theme>
-      <Router>
-        <Routes>
-          <Route element = {
-                  <>
-                    {lesserThan768 && <mob.layout />}
-                    {greaterThan768 && <desk.layout />}
-                  </>
-                 }
-                 path='/' >
+export default function App() {
+    const [themes] = React.useState(() => {
+        return muiThemes(cssVar)
+    });
+    return (
+        <AppContextProvider>
+            <ThemeProvider theme={themes}>
+                <CssBaseline />
+                <Router>
+                    <Routes>
+                        <Route path='/' element = { mediaScreen() } >
+                            {Object.entries(appRoutes)
+                                    .map(([key, property], _index, list)=> {
+                                        if(key==='index')
+                                            return(<Route key={_index} index element={property.element} />)
+                                        else
+                                            return(<Route key={_index} path={property.path} element={property.element} />)
 
-            <Route path='home' element={<Home />} />
-            <Route path='now-playing' element={<NowPlaying />} />
-            <Route path='music' element={<Music />} />
-            <Route path='videos' element={<Videos />} />
-            <Route path='my-cart' element={<Cart />} />
-            <Route path='posts' element={<Posts />} />
-            <Route index element={<Navigate replace to='home' />} />
-          </Route> 
-        </Routes>
-      </Router>
-    </context.theme>
-  );
+                                    })
+                            }
+                        </Route>
+                    </Routes>
+                </Router>
+            </ThemeProvider>
+        </AppContextProvider>
+    );
 }
 
-export default App;
+function mediaScreen( ) {
+    const lesserThan768 = useMediaPredicate("(max-width: 768px)");
+    const greaterThan768 = useMediaPredicate("(min-width: 768px)");
+    return (
+        <React.Fragment>
+            {(lesserThan768 && <>Mobile device not supported</>)||(greaterThan768 && <HomePage />)}
+        </React.Fragment>
+    )
+}

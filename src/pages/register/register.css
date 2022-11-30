@@ -1,0 +1,110 @@
+.Registration-root {
+    display: flex;
+    height: 100%;
+    padding: 4px 20px;
+}
+
+.Registration-root .MuiTab-root {
+    margin-bottom: 2px;
+    background: var(--ui);
+    text-transform: none;
+}
+
+.Registration-root .TabPane-root {
+    flex: 1;
+    border-right: 1px solid var(--border);
+}
+
+.Registration-root .RegisterStaff-root,
+.Registration-root .RegisterPatient-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Registration-root .RegisterPatient-root .MuiStep-root {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/** ACTIVE STEP */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root .Mui-active,
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel {
+    color: var(--primary)
+}
+
+/** ACTIVE STEP TEXT */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root .Mui-active .MuiStepIcon-text {
+    fill: var(--on-primary);
+}
+
+/** COMPLETED STEP */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root .Mui-completed,
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel {
+    opacity: .5;
+    color: var(--primary)
+}
+
+/** COMPLETED STEP TEXT */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root .Mui-completed .MuiStepIcon-text {
+    fill: var(--on-primary);
+}
+
+/** NOT-COMPLETED STEP */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root :not(.Mui-active):not(.Mui-completed) .MuiStepIcon-root,
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-label:not(.Mui-active):not(.Mui-completed).MuiStepLabel-alternativeLabel{
+    opacity: .7; /* circle's number */
+    color: grey
+}
+
+/** NOT-COMPLETED STEP TEXT */
+.Registration-root .RegisterPatient-root .MuiStep-root .MuiStepLabel-root .MuiStepIcon-text {
+    fill: black;
+}
+
+.Registration-root .RegisterStaff-root .Title,
+.Registration-root .RegisterPatient-root .Title {
+    margin: 0;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.Registration-root .RegisterStaff-root form,
+.Registration-root .RegisterPatient-root form {
+    flex: .9;
+    width: 50%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    /*background: var(--ui);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);*/
+}
+
+.Registration-root .RegisterStaff-root form .Step-action,
+.Registration-root .RegisterPatient-root form .Step-action {
+    padding: 20px;
+}
+
+.Registration-root .RegisterStaff-root form .Step-action .MuiButton-root,
+.Registration-root .RegisterPatient-root form .Step-action .MuiButton-root {
+    font-size: 1.1rem;
+    text-transform: none;
+}
+
+.Registration-root .RegisterStaff-root form .Step-container,
+.Registration-root .RegisterPatient-root form .Step-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.Registration-root .RegisterStaff-root form .Step-container .Slide-container,
+.Registration-root .RegisterPatient-root form .Step-container .Slide-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    overflow: auto;
+    max-height: 100%;
+    position: absolute;
+}

@@ -1,0 +1,67 @@
+.PatientInfo-container {
+    height: 100%;
+    display: flex;
+    position: relative;
+    /*background: var(--ui);
+    padding-top: 2px;*/
+}
+
+.PatientInfo-container .Floating-divider {
+    z-index: 0;
+    position: absolute;
+    background: var(--ui);
+    border-bottom: 1px solid var(--border);;
+    width: 100%;
+}
+
+.PatientInfo-container .PiiInfo-container {
+    display: flex;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.PatientInfo-container .PiiInfo-container .MuiAvatar-root {
+    background: var(--ui);
+    border: 1px solid var(--border);;
+}
+
+.PatientInfo-container .NavMonitor-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.PatientInfo-container .Main-tabs .MuiTab-root,
+.PatientInfo-container .MuiTabs-root.Main-tabs,
+.PatientInfo-container .Floating-divider {
+    height: 30px;
+    min-height: 30px;
+}
+
+.PatientInfo-container .MuiTab-root {
+    min-width: 0;
+    padding: 2px 15px 0 15px;
+    text-transform: none;
+}
+
+.PatientInfo-container .MuiTab-root.Mui-selected {
+    color: var(--primary);
+    background-color: var(--ui);
+    /*filter: brightness(90%);*/
+}
+
+.PatientInfo-container .MuiTabs-root .MuiTabs-indicator {
+    background-color: var(--primary);
+}
+
+.PatientInfo-container .MuiTab-root .MuiSvgIcon-root {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: inherit;
+}
+
+.PatientInfo-container .TabPane-root {
+    flex: 1;
+}
