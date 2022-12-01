@@ -1,0 +1,46 @@
+.BasicDrawer {
+}
+
+.BasicDrawer .MuiDrawer-paper {
+    background: var(--ui);
+    position: absolute;
+    width: 220px;
+}
+
+.BasicDrawer .MenuItems-wrapper {
+    flex: 1;
+    margin-top: 50px;
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav {
+    flex: 1;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav > .MenuItem-paper {
+    padding: 0;
+    display: flex;
+    margin-bottom: 1px;
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav.active > .MenuItem-paper * {
+    color: var(--highlight);
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav > .MenuItem-paper .MuiListItemButton-root {
+    padding: 5px 10px;
+    display: flex;
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav > .MenuItem-paper .MuiListItemText-root {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.BasicDrawer .MenuItems-wrapper .MenuItem-nav > .MenuItem-paper .MuiListItemIcon-root {
+    min-width: 0;
+    margin-left: 5px;
+}
+

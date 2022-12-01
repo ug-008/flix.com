@@ -1,0 +1,30 @@
+.SearchBase {
+    margin: 0 10px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.SearchBase .InputBase-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--ui);
+}
+
+.SearchBase .InputBase-wrapper  .MuiInputBase-root {
+    margin-left: 10px;
+    flex: 1;
+    color: var(--font);
+    padding: 1px;
+}
+
+.SearchBase-Popover .MuiPopover-paper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+    position: absolute;
+    padding: 15px 15px;
+    border-radius: 0 0 5px 5px !important;
+    background-color: var(--ui) !important;
+}
